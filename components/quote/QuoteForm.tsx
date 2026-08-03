@@ -83,7 +83,7 @@ const handleSubmit = async (
             </h2>
 
             <p className="mt-4 text-muted-foreground">
-              We've received your enquiry and our export team will
+            We&apos;ve received your enquiry and our export team will
               contact you within <strong>24 business hours</strong>.
             </p>
 

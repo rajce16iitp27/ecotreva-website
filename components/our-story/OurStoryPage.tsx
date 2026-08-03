@@ -71,7 +71,7 @@ export function OurStoryPage() {
       </p>
 
       <h2 className="mt-4 font-display text-4xl font-bold text-primary">
-        From Our Grandparents' Generation to a Global Future
+        From Our Grandparents&apos; Generation to a Global Future
       </h2>
 
       <div className="mt-8 space-y-7 text-lg leading-9 text-gray-700">
@@ -95,7 +95,7 @@ export function OurStoryPage() {
 
         <p>
           We combine the knowledge and sourcing relationships built over
-          generations with today's expectations for certified quality,
+          generations with today&apos;s expectations for certified quality,
           dependable supply and international standards.
         </p>
 

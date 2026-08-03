@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { HeroVisual } from "@/components/home/HeroVisual";
 import {
   Leaf,
   Award,

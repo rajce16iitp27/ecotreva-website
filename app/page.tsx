@@ -1,19 +1,17 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+
 import { Hero } from "@/components/home/Hero";
 import { MissionSection } from "@/components/home/MissionSection";
 import { TrustSection } from "@/components/home/TrustSection";
 import { ProductCategories } from "@/components/home/ProductCategories";
 import { WhyEcotreva } from "@/components/home/WhyEcotreva";
 import { ExportProcess } from "@/components/home/ExportProcess";
-import { QuoteSection } from "../components/home/QuoteSection";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export default function Home() {
   return (
     <>
-      <Header />
+
 
       <main>
         <Hero />
@@ -57,10 +55,8 @@ export default function Home() {
         <ExportProcess />
 
         {/* Request Quote Section */}
-        <QuoteSection />
       </main>
 
-      <Footer />
     </>
   );
 }

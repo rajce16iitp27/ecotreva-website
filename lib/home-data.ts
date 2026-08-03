@@ -1,8 +1,9 @@
 export const navLinks = [
-  { label: "Products", href: "#products" },
-  { label: "Markets", href: "#markets" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Products", href: "/#products" },
+  { label: "Markets", href: "/#markets" },
+  { label: "About", href: "/#about" },
+  { label: "Our Story", href: "/our-story" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export const trustCards = [
@@ -35,39 +36,45 @@ export const trustCards = [
 export const productCategories = [
   {
     name: "Bagasse Packaging",
-    description: "Compostable containers and tableware from sugarcane fiber.",
+    description: "Compostable food packaging made from renewable sugarcane fiber.",
     gradient: "from-teal-900/80 via-teal-700/60 to-emerald-600/40",
     pattern: "grain",
+    image: "/products/bagasse-packaging.png",
   },
   {
-    name: "Handmade Paper",
-    description: "Artisan-crafted sheets for premium stationery and packaging.",
+    name: "Paper Products",
+    description: "Handmade paper, seed paper and premium sustainable paper solutions.",
     gradient: "from-stone-700/70 via-amber-800/50 to-orange-600/30",
     pattern: "fiber",
+    image: "/products/handmade-paper.png",
   },
   {
-    name: "Seed Paper",
-    description: "Plantable paper embedded with wildflower and herb seeds.",
+    name: "Eco Products",
+    description: "Innovative eco-friendly products made from alternative sustainable materials.",
     gradient: "from-green-900/70 via-lime-800/50 to-emerald-500/30",
     pattern: "dots",
+    image: "/products/eco-products.png",
   },
   {
     name: "Molded Pulp",
-    description: "Custom-fit protective packaging for electronics and retail.",
+    description: "Protective molded fiber packaging for retail and industrial applications.",
     gradient: "from-slate-800/70 via-gray-600/50 to-stone-400/30",
     pattern: "grid",
+    image: "/products/molded-pulp-packaging.png",
   },
   {
     name: "Bamboo Products",
-    description: "Durable utensils, straws, and disposables from fast-renewable bamboo.",
+    description: "Sustainable bamboo tableware, cutlery and everyday essentials.",
     gradient: "from-emerald-950/80 via-green-800/60 to-lime-700/40",
     pattern: "lines",
+    image: "/products/bamboo-products.png",
   },
   {
     name: "Jute Products",
-    description: "Natural fiber bags, pouches, and promotional merchandise.",
+    description: "Eco-friendly jute bags, packaging and promotional merchandise.",
     gradient: "from-amber-950/70 via-yellow-900/50 to-amber-600/30",
     pattern: "weave",
+    image: "/products/jute-products.png",
   },
 ] as const;
 
@@ -122,20 +129,20 @@ export const exportSteps = [
 ] as const;
 
 export const footerLinks = {
-  products: [
-    "Bagasse Packaging",
-    "Handmade Paper",
-    "Seed Paper",
-    "Molded Pulp",
-    "Bamboo Products",
-    "Jute Products",
-  ],
+ products: [
+  "Bagasse Packaging",
+  "Paper Products",
+  "Molded Pulp",
+  "Bamboo Products",
+  "Jute Products",
+  "Eco Products",
+],
 
   company: [
-    { label: "About Ecotreva", href: "#about" },
-    { label: "Export Markets", href: "#markets" },
-    { label: "Our Process", href: "#process" },
-    { label: "Request Quote", href: "#quote" },
+    { label: "About Ecotreva", href: "/#about" },
+    { label: "Export Markets", href: "/#markets" },
+    { label: "Our Process", href: "/#process" },
+    { label: "Request Quote", href: "/request-quote" },   // ✅
   ],
 
   contact: [

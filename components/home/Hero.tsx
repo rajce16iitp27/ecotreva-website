@@ -1,31 +1,64 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { HeroVisual } from "@/components/home/HeroVisual";
+import {
+  Leaf,
+  Award,
+  Settings2,
+  Truck,
+  Boxes,
+} from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
+    <section className="relative overflow-hidden">
+  <div
+  className="flex min-h-[450px] flex-col pt-3 pb-12 bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage:
+  "linear-gradient(rgba(255,255,255,0.66), rgba(255,255,255,0.66)), url('/hero-products-v2.png')",
+  }}
+>
+
+      {/* Background Image */}
+      {/* <HeroVisual /> */}
+
+      {/* Decorative Blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-accent-muted/30 blur-3xl" />
         <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="max-w-xl">
+      {/* Content */}
+      <Container className="relative z-10">
 
-            {/* Brand */}
-            <h2 className="animate-fade-in-up font-display text-4xl font-bold tracking-tight text-[#407E4F] sm:text-5xl lg:text-5xl">
-              Ecotreva &amp; Co.
-            </h2>
+      <div className="flex flex-col">
+
+
+
+
+
+
+
+
+          {/* Top Content */}
+          <div className="max-w-[680px] mt-6">
 
             {/* Tagline */}
-            <p className="animate-fade-in-up animation-delay-100 mt-2 text-base font-semibold italic tracking-wide text-[#7A5C3E]">
-              Where Green Meets Global
-            </p>
+            <div className="animate-fade-in-up animation-delay-100 flex items-center gap-4">
+              <span className="text-base font-bold uppercase tracking-[0.12em] text-[#6C7A51]">
+                Where <span className="text-[#407E4F]">Green</span> Meets Global
+              </span>
 
-            {/* Hero Headline */}
-            <h1 className="animate-fade-in-up animation-delay-200 mt-6 font-display text-2xl font-semibold leading-[1.2] tracking-tight text-black sm:text-3xl lg:text-4xl">
+              <div className="h-5 w-[1.5px] bg-[#0F3D3E]/50" />
+
+              <span className="text-base font-bold tracking-[0.12em] text-[#0D5845]">
+  Since 1971
+</span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.1] tracking-tight text-[#0D5845]">
               Eco-Friendly Materials.
               <br />
               Exported from India.
@@ -34,29 +67,74 @@ export function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="animate-fade-in-up animation-delay-300 mt-6 text-base leading-8 text-gray-600 sm:text-lg">
-              Ecotreva &amp; Co. connects sustainable innovations from India
-              with businesses across the globe. We export eco-friendly
-              materials with a focus on certified quality, dependable
-              sourcing, and long-term partnerships.
-            </p>
-
-            {/* Buttons */}
-            <div className="animate-fade-in-up animation-delay-400 mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button href="#products" variant="primary">
-                Explore Products
-              </Button>
-
-              <Button href="#quote" variant="outline">
-                Request a Quote
-              </Button>
-            </div>
+            <p className="mt-7 mb-0 max-w-[620px] text-[16px] font-medium leading-8 text-slate-600">
+  For over five decades, Ecotreva &amp; Co. has helped businesses worldwide
+  source sustainable materials from India with reliable quality and
+  export-ready solutions.
+</p>
 
           </div>
 
-          <HeroVisual />
+          {/* Bottom Buttons */}
+          <div className="mt-6 mb-6 flex flex-col gap-4 sm:flex-row">
+
+          <Button href="/#products" variant="outline">
+  Explore Products
+</Button>
+
+<Button href="/request-quote" variant="primary">
+  Enquire Now
+</Button>
+          </div>
+{/* Trust Strip */}
+<div className="mt-4">
+<div className="flex justify-center gap-4 flex-wrap">
+
+<div className="flex w-52 items-center justify-center gap-3 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 px-5 py-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl">
+
+<Leaf className="h-6 w-6 text-[#0D5845]" />
+
+<span className="text-sm font-semibold text-[#0D5845]">
+  Plastic-Free
+</span>
+
+</div>
+
+<div className="flex w-52 items-center justify-center gap-3 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 px-5 py-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl">
+  <Award className="h-6 w-6 text-[#0D5845]" />
+  <span className="text-sm font-semibold text-[#0D5845]">
+    Unmatched Quality
+  </span>
+</div>
+
+<div className="flex w-52 items-center justify-center gap-3 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 px-5 py-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl">
+  <Settings2 className="h-6 w-6 text-[#0D5845]" />
+  <span className="text-sm font-semibold text-[#0D5845]">
+    Custom Manufacturing
+  </span>
+</div>
+
+<div className="flex w-52 items-center justify-center gap-3 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 px-5 py-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl">
+  <Truck className="h-6 w-6 text-[#0D5845]" />
+  <span className="text-sm font-semibold text-[#0D5845]">
+    On-Time Delivery
+  </span>
+</div>
+
+<div className="flex w-52 items-center justify-center gap-3 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 px-5 py-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl">
+  <Boxes className="h-6 w-6 text-[#0D5845]" />
+  <span className="text-sm font-semibold text-[#0D5845]">
+    Bulk Supply
+  </span>
+</div>
+
+  </div>
+</div>
         </div>
+
       </Container>
+      </div>
+
     </section>
   );
 }

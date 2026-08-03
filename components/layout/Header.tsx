@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { navLinks } from "@/lib/home-data";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -10,10 +11,13 @@ import { Logo } from "@/components/ui/Logo";
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const pathname = usePathname();
+  const router = useRouter();
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <Container>
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-3">
           <Logo priority />
 
           <nav
@@ -21,18 +25,34 @@ export function Header() {
             aria-label="Main navigation"
           >
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-muted transition-colors duration-200 hover:text-primary"
-              >
-                {link.label}
-              </Link>
-            ))}
+  <button
+    key={link.href}
+    type="button"
+    onClick={() => {
+      if (link.href.startsWith("/#")) {
+        const id = link.href.replace("/#", "");
+
+        if (pathname === "/") {
+          document.getElementById(id)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        } else {
+          router.push("/#" + id);
+        }
+      } else {
+        router.push(link.href);
+      }
+    }}
+    className="text-[17px] font-medium text-muted transition-colors duration-200 hover:text-primary"
+  >
+    {link.label}
+  </button>
+))}
           </nav>
 
           <div className="hidden md:block">
-            <Button href="#quote" variant="primary" className="px-5 py-2.5">
+            <Button href="/request-quote" variant="primary" className="px-5 py-2.5">
               Request a Quote
             </Button>
           </div>
@@ -90,7 +110,7 @@ export function Header() {
               ))}
               <li className="mt-3 px-3">
                 <Button
-                  href="#quote"
+                  href="/request-quote"
                   variant="primary"
                   className="w-full"
                   onClick={() => setMobileOpen(false)}

@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 
 export function MissionSection() {
   return (
-    <section className="border-y border-border bg-surface py-16 sm:py-20 lg:py-24">
+    <section className="border-y border-border bg-surface pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24">
       <Container>
         <div className="mx-auto max-w-4xl">
           <div className="text-center">

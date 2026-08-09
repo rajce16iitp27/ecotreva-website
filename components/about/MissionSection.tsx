@@ -14,8 +14,8 @@ export function MissionSection() {
 
           <blockquote className="mt-10 text-center">
             <p className="font-display text-2xl font-medium leading-snug tracking-tight text-primary sm:text-3xl lg:text-4xl lg:leading-tight">
-              &ldquo;To help decarbonize global supply chains by exporting
-              eco-friendly products from India.&rdquo;
+              To help decarbonize global supply chains by exporting
+              eco-friendly products from India.
             </p>
           </blockquote>
 

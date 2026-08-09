@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { HeroVisual } from "@/components/home/HeroVisual";
+
 import {
+  Clock3,
   Leaf,
   Award,
   Settings2,
@@ -12,7 +15,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
   <div
-  className="flex min-h-[450px] flex-col pt-3 pb-12 bg-cover bg-center bg-no-repeat"
+  className="flex min-h-[630px] flex-col pt-3 pb-12 bg-cover bg-center bg-no-repeat"
   style={{
     backgroundImage:
   "linear-gradient(rgba(255,255,255,0.66), rgba(255,255,255,0.66)), url('/hero-products-v2.png')",
@@ -20,7 +23,7 @@ export function Hero() {
 >
 
       {/* Background Image */}
-      {/* <HeroVisual /> */}
+<HeroVisual />
 
       {/* Decorative Blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -41,36 +44,37 @@ export function Hero() {
 
 
           {/* Top Content */}
-          <div className="max-w-[680px] mt-6">
+          <div className="max-w-[680px] mt-10">
 
             {/* Tagline */}
-            <div className="animate-fade-in-up animation-delay-100 flex items-center gap-4">
-              <span className="text-base font-bold uppercase tracking-[0.12em] text-[#6C7A51]">
-                Where <span className="text-[#407E4F]">Green</span> Meets Global
-              </span>
+            <div className="inline-flex items-center gap-4">
+  <span className="text-base font-bold tracking-[0.12em] text-[#7A8068]">
+    WHERE
+  </span>
 
-              <div className="h-5 w-[1.5px] bg-[#0F3D3E]/50" />
+  <span className="text-base font-bold tracking-[0.12em] text-[#0D5845]">
+    GREEN
+  </span>
 
-              <span className="text-base font-bold tracking-[0.12em] text-[#0D5845]">
-  Since 1971
-</span>
-            </div>
+  <span className="text-base font-bold tracking-[0.12em] text-[#7A8068]">
+    MEETS GLOBAL
+  </span>
+
+  <div className="mx-2 h-5 w-[1.5px] bg-[#0F3D3E]/50" />
+
+  <span className="text-base font-bold tracking-[0.12em] text-[#0D5845]">
+    Since 1971
+  </span>
+</div>
 
             {/* Heading */}
-            <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.1] tracking-tight text-[#0D5845]">
-              Eco-Friendly Materials.
-              <br />
-              Exported from India.
-              <br />
-              Trusted Globally.
-            </h1>
-
-            {/* Description */}
-            <p className="mt-7 mb-0 max-w-[620px] text-[16px] font-medium leading-8 text-slate-600">
-  For over five decades, Ecotreva &amp; Co. has helped businesses worldwide
-  source sustainable materials from India with reliable quality and
-  export-ready solutions.
-</p>
+<h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.1] tracking-tight text-[#0D5845]">
+  Eco-Friendly Materials.
+  <br />
+  Manufactured in India.
+  <br />
+  Exported Worldwide.
+</h1>
 
           </div>
 
@@ -86,15 +90,15 @@ export function Hero() {
 </Button>
           </div>
 {/* Trust Strip */}
-<div className="mt-4">
+<div className="mt-22">
 <div className="flex justify-center gap-4 flex-wrap">
 
 <div className="flex w-52 items-center justify-center gap-3 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 px-5 py-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl">
 
-<Leaf className="h-6 w-6 text-[#0D5845]" />
+<Clock3 className="h-6 w-6 text-[#0D5845]" />
 
 <span className="text-sm font-semibold text-[#0D5845]">
-  Plastic-Free
+  55+ Years
 </span>
 
 </div>

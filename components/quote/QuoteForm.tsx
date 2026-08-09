@@ -100,7 +100,7 @@ const handleSubmit = async (
     <section className="bg-accent-muted/20 py-24">
       <Container>
         <SectionHeading
-          eyebrow="Let's Connect"
+          eyebrow="Let&apos;s Connect"
           title="Tell Us About Your Requirements"
           description="Share your requirements and our export team will contact you within 24 business hours with the best solution for your business."
           align="center"

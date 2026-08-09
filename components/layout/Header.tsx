@@ -15,48 +15,90 @@ export function Header() {
   const router = useRouter();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
+    <header className="bg-white sticky top-0 z-50 border-b border-[#D6C2A3]">
       <Container>
-        <div className="flex items-center justify-between py-3">
-          <Logo priority />
+        <div className="flex min-h-[80px] items-center justify-between gap-6">
+          {/* Brand */}
+          <div className="flex items-center">
+          <Logo className="scale-[1.12]" />
 
+          {/* 55 Years of Sustainability */}
+<div
+  className="ml-7 flex h-9 w-[125px] shrink-0 items-center"
+  aria-label="55 Years of Sustainability"
+>
+  {/* Vertical Divider */}
+  <div className="mr-3 h-7 w-px bg-[#C9C1AC]" />
+
+  <div className="flex items-center">
+    <span className="font-display text-[28px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A]">
+      55
+    </span>
+
+    <div className="ml-2.5 flex flex-col justify-center leading-none">
+      <span className="text-[10px] font-semibold tracking-wide text-[#0D5845]">
+        Years of
+      </span>
+
+      <span className="mt-1 text-[10px] font-semibold tracking-wide text-[#0D5845]">
+        Sustainability
+      </span>
+    </div>
+  </div>
+</div>
+          </div>
+
+          {/* Desktop Navigation */}
           <nav
             className="hidden items-center gap-8 md:flex"
             aria-label="Main navigation"
           >
             {navLinks.map((link) => (
-  <button
-    key={link.href}
-    type="button"
-    onClick={() => {
-      if (link.href.startsWith("/#")) {
-        const id = link.href.replace("/#", "");
-
-        if (pathname === "/") {
-          document.getElementById(id)?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        } else {
-          router.push("/#" + id);
-        }
-      } else {
-        router.push(link.href);
-      }
-    }}
-    className="text-[17px] font-medium text-muted transition-colors duration-200 hover:text-primary"
-  >
-    {link.label}
-  </button>
-))}
+              <button
+                key={link.href}
+                type="button"
+                onClick={() => {
+                  if (link.href.startsWith("/#")) {
+                    const id = link.href.replace("/#", "");
+                    const element = document.getElementById(id);
+                
+                    if (pathname === "/" && element) {
+                      const headerOffset = 100;
+                      const y =
+                        element.getBoundingClientRect().top +
+                        window.scrollY -
+                        headerOffset;
+                
+                      window.scrollTo({
+                        top: y,
+                        behavior: "smooth",
+                      });
+                    } else {
+                      router.push(link.href);
+                    }
+                  } else {
+                    router.push(link.href);
+                  }
+                }}
+                className="text-[17px] font-medium text-muted transition-colors duration-200 hover:text-primary"
+              >
+                {link.label}
+              </button>
+            ))}
           </nav>
 
+          {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button href="/request-quote" variant="primary" className="px-5 py-2.5">
+            <Button
+              href="/request-quote"
+              variant="primary"
+              className="px-5 py-2.5"
+            >
               Request a Quote
             </Button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-lg p-2 text-primary md:hidden"
@@ -90,6 +132,7 @@ export function Header() {
           </button>
         </div>
 
+        {/* Mobile Navigation */}
         {mobileOpen && (
           <nav
             id="mobile-menu"
@@ -108,6 +151,7 @@ export function Header() {
                   </Link>
                 </li>
               ))}
+
               <li className="mt-3 px-3">
                 <Button
                   href="/request-quote"

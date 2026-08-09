@@ -50,13 +50,13 @@ function TrustIcon({ icon }: { icon: string }) {
 
 export function TrustSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24">
-      <Container>
+    <section className="pt-12 pb-4 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-6">
+      <Container className="mt-15">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {trustCards.map((card, index) => (
             <article
               key={card.title}
-              className="group rounded-2xl border border-border bg-surface p-8 shadow-sm shadow-primary/5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/15 hover:shadow-lg hover:shadow-primary/10"
+              className="group rounded-2xl border border-border bg-surface p-4 shadow-sm shadow-primary/5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/15 hover:shadow-lg hover:shadow-primary/10"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="mb-5 inline-flex rounded-xl bg-accent-muted/50 p-3 transition-colors group-hover:bg-accent-muted">
@@ -65,7 +65,7 @@ export function TrustSection() {
               <h3 className="font-display text-xl font-semibold text-foreground">
                 {card.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {card.description}
               </p>
             </article>

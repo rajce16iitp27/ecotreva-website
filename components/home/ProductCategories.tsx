@@ -6,13 +6,16 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function ProductCategories() {
   return (
-    <section id="products" className="py-16 sm:py-20 lg:py-28">
+    <section
+  id="products"
+  className="pt-6 pb-12 sm:pt-8 sm:pb-14 lg:pt-8 lg:pb-16"
+>
       <Container>
         <SectionHeading
           eyebrow="Product Range"
           title="Sustainable materials for every application"
           description="Explore our curated export catalog of eco-friendly products manufactured to international standards."
-          className="mb-12 lg:mb-16"
+          className="mb-8 lg:mb-10"
         />
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -22,12 +25,13 @@ export function ProductCategories() {
               className="group overflow-hidden rounded-2xl border border-border bg-surface shadow-sm shadow-primary/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
             >
              <div className="relative h-56 overflow-hidden">
-  <Image
-    src={category.image}
-    alt={category.name}
-    fill
-    className="object-cover transition-transform duration-500 group-hover:scale-105"
-  />
+             <Image
+  src={category.image}
+  alt={category.name}
+  fill
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+  className="object-cover transition-transform duration-500 group-hover:scale-105"
+/>
 
   <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
 

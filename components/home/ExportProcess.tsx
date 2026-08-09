@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function ExportProcess() {
   return (
-    <section id="process" className="py-16 sm:py-20 lg:py-28">
+    <section id="process" className="pt-2 pb-16 sm:pt-4 sm:pb-20 lg:pt-2 lg:pb-28">
       <Container>
         <SectionHeading
           eyebrow="How It Works"

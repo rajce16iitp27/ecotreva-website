@@ -1,7 +1,8 @@
 export const navLinks = [
   { label: "Products", href: "/#products" },
-  { label: "Markets", href: "/#markets" },
-  { label: "About", href: "/#about" },
+  { label: "Markets", href: "/markets" },
+  { label: "Insights", href: "/insights" },
+  { label: "About", href: "/about" },
   { label: "Our Story", href: "/our-story" },
   { label: "Contact", href: "/#contact" },
 ] as const;
@@ -140,7 +141,7 @@ export const footerLinks = {
 
   company: [
     { label: "About Ecotreva", href: "/#about" },
-    { label: "Export Markets", href: "/#markets" },
+    { label: "Export Markets", href: "/markets" },
     { label: "Our Process", href: "/#process" },
     { label: "Request Quote", href: "/request-quote" },   // ✅
   ],

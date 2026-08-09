@@ -19,7 +19,7 @@ export function Header() {
       <Container>
         <div className="flex min-h-[80px] items-center justify-between gap-2 sm:gap-6">
           {/* Brand */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-1">
           <Logo className="scale-[1.12]" />
 
           {/* 55 Years of Sustainability */}
@@ -28,14 +28,15 @@ export function Header() {
   aria-label="55 Years of Sustainability"
 >
   {/* Vertical Divider */}
-  <div className="mr-3 h-7 w-px bg-[#C9C1AC]" />
+  <div className="mr-3 h-7 w-[2px] bg-[#B89A4A] shrink-0" />
+  
 
-  <div className="flex items-center">
-  <span className="font-display text-[24px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A] sm:text-[28px]">
+  <div className="flex items-center gap-1">
+  <span className="-translate-x-2 font-display text-[28px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A] sm:translate-x-0">
   55
 </span>
 
-    <div className="ml-1 max-w-[70px] flex flex-col justify-center leading-none sm:ml-2.5 sm:max-w-none">
+<div className="ml-0 max-w-[70px] -translate-x-2 flex flex-col justify-center leading-none sm:ml-2.5 sm:max-w-none sm:translate-x-0">
       <span className="text-[8px] font-semibold tracking-wide text-[#0D5845] sm:text-[10px]">
         Years of
       </span>

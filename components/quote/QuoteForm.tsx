@@ -1,16 +1,20 @@
 "use client";
 
+
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
+
 export function QuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+
   const searchParams = useSearchParams();
   const selectedProduct = searchParams.get("product") || "";
+
 
   const [companyName, setCompanyName] = useState("");
   const [contactPerson, setContactPerson] = useState("");
@@ -21,15 +25,19 @@ export function QuoteForm() {
   const [estimatedQuantity, setEstimatedQuantity] = useState("Sample");
   const [requirements, setRequirements] = useState("");
 
+
 const handleSubmit = async (
   e: React.FormEvent<HTMLFormElement>
 ) => {
   e.preventDefault();
 
+
   try {
     setIsSubmitting(true);
 
+
     console.log("Submitting form...");
+
 
     const response = await fetch("/api/request-quote", {
       method: "POST",
@@ -48,15 +56,19 @@ const handleSubmit = async (
       }),
     });
 
+
     console.log("Status:", response.status);
+
 
     const result = await response.json();
 
+
     console.log("Result:", result);
+
 
     if (result.success) {
       setSubmitted(true);
-    
+   
       setTimeout(() => {
         window.scrollTo({
           top: 0,
@@ -71,6 +83,7 @@ const handleSubmit = async (
   }
 };
 
+
   if (submitted) {
     return (
       <section className="bg-accent-muted/20 py-24">
@@ -78,14 +91,17 @@ const handleSubmit = async (
           <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-white p-12 text-center shadow-xl">
             <div className="mb-6 text-5xl">✅</div>
 
+
             <h2 className="text-3xl font-bold text-primary">
               Thank You!
             </h2>
+
 
             <p className="mt-4 text-muted-foreground">
             We&apos;ve received your enquiry and our export team will
               contact you within <strong>24 business hours</strong>.
             </p>
+
 
             <p className="mt-6 font-semibold">
               sales@ecotreva.com
@@ -96,8 +112,9 @@ const handleSubmit = async (
     );
   }
 
+
   return (
-    <section className="bg-accent-muted/20 py-24">
+    <section className="bg-accent-muted/20 pt-10 pb-24">
       <Container>
         <SectionHeading
           eyebrow="Let&apos;s Connect"
@@ -105,6 +122,7 @@ const handleSubmit = async (
           description="Share your requirements and our export team will contact you within 24 business hours with the best solution for your business."
           align="center"
         />
+
 
         <div className="mx-auto mt-14 max-w-5xl rounded-3xl border border-border bg-white p-10 shadow-xl">
           <form
@@ -115,6 +133,7 @@ const handleSubmit = async (
               <label className="mb-2 block text-sm font-medium">
                 Company Name *
               </label>
+
 
               <input
                 type="text"
@@ -128,10 +147,12 @@ const handleSubmit = async (
               />
             </div>
 
+
             <div>
               <label className="mb-2 block text-sm font-medium">
                 Contact Person *
               </label>
+
 
               <input
   type="text"
@@ -143,10 +164,12 @@ const handleSubmit = async (
 />
             </div>
 
+
             <div>
               <label className="mb-2 block text-sm font-medium">
                 Business Email *
               </label>
+
 
               <input
   type="email"
@@ -158,10 +181,12 @@ const handleSubmit = async (
 />
             </div>
 
+
             <div>
               <label className="mb-2 block text-sm font-medium">
                 Phone / WhatsApp
               </label>
+
 
               <input
   type="text"
@@ -172,10 +197,12 @@ const handleSubmit = async (
 />
             </div>
 
+
             <div>
               <label className="mb-2 block text-sm font-medium">
                 Country *
               </label>
+
 
               <input
   type="text"
@@ -187,10 +214,12 @@ const handleSubmit = async (
 />
             </div>
 
+
             <div>
             <label className="mb-2 block text-sm font-medium">
   Product Category *
 </label>
+
 
 <select
   className="w-full rounded-xl border border-border px-4 py-3 focus:border-[#407E4F] focus:outline-none"
@@ -202,33 +231,41 @@ const handleSubmit = async (
     Select a Product Category
   </option>
 
+
   <option value="Bagasse Packaging">
     Bagasse Packaging (plates, bowls, clamshells, trays, etc.)
   </option>
+
 
   <option value="Paper Products">
     Paper Products (handmade paper, seed paper, seed bombs, wrapping paper, etc.)
   </option>
 
+
   <option value="Molded Pulp Packaging">
     Molded Pulp Packaging (trays, inserts, protective packaging, etc.)
   </option>
+
 
   <option value="Bamboo Products">
     Bamboo Products (cutlery, straws, tableware, etc.)
   </option>
 
+
   <option value="Jute Products">
     Jute Products (bags, pouches, promotional items, etc.)
   </option>
+
 
   <option value="Eco-Friendly Products">
     Eco-Friendly Products (rice husk, coconut shell, areca, wheat straw, etc.)
   </option>
 
+
   <option value="Custom Product Sourcing">
     Custom Product Sourcing
   </option>
+
 
   <option value="Other">
     Other (Please specify in message)
@@ -236,10 +273,12 @@ const handleSubmit = async (
 </select>
             </div>
 
+
             <div className="md:col-span-2">
               <label className="mb-2 block text-sm font-medium">
                 Estimated Quantity
               </label>
+
 
               <select
   value={estimatedQuantity}
@@ -255,10 +294,12 @@ const handleSubmit = async (
               </select>
             </div>
 
+
             <div className="md:col-span-2">
               <label className="mb-2 block text-sm font-medium">
                 Requirements
               </label>
+
 
               <textarea
   rows={6}
@@ -268,6 +309,7 @@ const handleSubmit = async (
   className="w-full rounded-xl border border-border px-4 py-3 focus:border-[#407E4F] focus:outline-none"
 />
             </div>
+
 
             <div className="md:col-span-2 mt-6">
               <button
@@ -286,3 +328,4 @@ const handleSubmit = async (
     </section>
   );
 }
+

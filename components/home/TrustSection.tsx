@@ -50,7 +50,7 @@ function TrustIcon({ icon }: { icon: string }) {
 
 export function TrustSection() {
   return (
-    <section className="pt-12 pb-4 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-6">
+    <section className="pt-0 pb-0 sm:pt-2 sm:pb-0 lg:pt-4 lg:pb-2">
       <Container className="mt-15">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {trustCards.map((card, index) => (

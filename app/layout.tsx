@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import type { Metadata } from "next";
-import { DM_Sans, Libre_Baskerville } from "next/font/google";
+import { DM_Sans, Libre_Baskerville, Pacifico } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -14,6 +14,12 @@ const libreBaskerville = Libre_Baskerville({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+export const pacifico = Pacifico({
+  variable: "--font-cursive",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -30,18 +36,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${libreBaskerville.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${libreBaskerville.variable} ${pacifico.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
-
-<Header />
-
-  <main className="flex-1">
-    {children}
-  </main>
-
-  <Footer />
-</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

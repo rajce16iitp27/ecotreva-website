@@ -24,10 +24,14 @@
   --color-border: var(--border);
   --font-sans: var(--font-dm-sans);
   --font-display: var(--font-fraunces);
+  --font-cursive: var(--font-cursive);
 }
 
 @utility font-display {
   font-family: var(--font-fraunces), Georgia, serif;
+}
+@utility font-cursive {
+  font-family: var(--font-cursive), cursive;
 }
 
 html {

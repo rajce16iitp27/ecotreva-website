@@ -44,22 +44,21 @@ export function Hero() {
 
 
           {/* Top Content */}
-          <div className="max-w-[680px] mt-10">
+          <div className="w-full max-w-[680px] mt-10">
 
             {/* Tagline */}
-            <div className="inline-flex items-center gap-4">
-  <span className="text-base font-bold tracking-[0.12em] text-[#7A8068]">
-    WHERE
+            <div className="inline-flex items-center gap-1 sm:gap-4">
+            <span className="font-cursive text-xl font-semibold text-[#B89A4A]">
+  Where
+</span>
+
+  <span className="font-cursive text-xl font-semibold text-[#0D5845]">
+  Green
   </span>
 
-  <span className="text-base font-bold tracking-[0.12em] text-[#0D5845]">
-    GREEN
-  </span>
-
-  <span className="text-base font-bold tracking-[0.12em] text-[#7A8068]">
-    MEETS GLOBAL
-  </span>
-
+  <span className="font-cursive text-xl font-semibold text-[#B89A4A]">
+  Meets Global
+</span>
   <div className="mx-2 h-5 w-[1.5px] bg-[#0F3D3E]/50" />
 
   <span className="text-base font-bold tracking-[0.12em] text-[#0D5845]">
@@ -68,7 +67,7 @@ export function Hero() {
 </div>
 
             {/* Heading */}
-<h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.1] tracking-tight text-[#0D5845]">
+<h1 className="mt-6 font-display text-[2.1rem] font-bold leading-[1.1] tracking-tight text-[#0D5845] sm:text-[2.6rem]">
   Eco-Friendly Materials.
   <br />
   Manufactured in India.

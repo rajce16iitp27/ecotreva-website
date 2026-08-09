@@ -17,7 +17,7 @@ export function Header() {
   return (
     <header className="bg-white sticky top-0 z-50 border-b border-[#D6C2A3]">
       <Container>
-        <div className="flex min-h-[80px] items-center justify-between gap-6">
+        <div className="flex min-h-[80px] items-center justify-between gap-2 sm:gap-6">
           {/* Brand */}
           <div className="flex items-center">
           <Logo className="scale-[1.12]" />
@@ -31,16 +31,16 @@ export function Header() {
   <div className="mr-3 h-7 w-px bg-[#C9C1AC]" />
 
   <div className="flex items-center">
-    <span className="font-display text-[28px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A]">
-      55
-    </span>
+  <span className="font-display text-[24px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A] sm:text-[28px]">
+  55
+</span>
 
-    <div className="ml-2.5 flex flex-col justify-center leading-none">
-      <span className="text-[10px] font-semibold tracking-wide text-[#0D5845]">
+    <div className="ml-1 max-w-[70px] flex flex-col justify-center leading-none sm:ml-2.5 sm:max-w-none">
+      <span className="text-[8px] font-semibold tracking-wide text-[#0D5845] sm:text-[10px]">
         Years of
       </span>
 
-      <span className="mt-1 text-[10px] font-semibold tracking-wide text-[#0D5845]">
+      <span className="mt-0.5 text-[8px] font-semibold tracking-wide text-[#0D5845] sm:mt-1 sm:text-[10px]">
         Sustainability
       </span>
     </div>
@@ -50,7 +50,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden items-center gap-8 md:flex"
+            className="hidden items-center gap-8 lg:flex"
             aria-label="Main navigation"
           >
             {navLinks.map((link) => (
@@ -88,7 +88,7 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
               href="/request-quote"
               variant="primary"
@@ -101,7 +101,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-lg p-2 text-primary md:hidden"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-primary lg:hidden"
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}

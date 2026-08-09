@@ -17,7 +17,7 @@ export function HeroVisual() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((current) => (current + 1) % heroImages.length);
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);

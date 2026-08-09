@@ -22,8 +22,10 @@ export function Hero() {
   }}
 >
 
-      {/* Background Image */}
-<HeroVisual />
+     {/* Background Image */}
+<div className="absolute inset-0 z-0 pointer-events-auto">
+  <HeroVisual />
+</div>
 
       {/* Decorative Blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -32,7 +34,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <Container className="relative z-10">
+      <Container className="relative z-30">
 
       <div className="flex flex-col">
 
@@ -47,16 +49,16 @@ export function Hero() {
           <div className="w-full max-w-[680px] mt-10">
 
             {/* Tagline */}
-            <div className="inline-flex items-center gap-1 sm:gap-4">
-            <span className="font-cursive text-xl font-semibold text-[#B89A4A]">
+            <div className="inline-flex items-center gap-1 sm:gap-2">
+            <span className="font-cursive text-xl font-semibold text-[#B6A27A]">
   Where
 </span>
 
-  <span className="font-cursive text-xl font-semibold text-[#0D5845]">
+<span className="font-cursive text-xl font-semibold text-[#0D5845]">
   Green
-  </span>
+</span>
 
-  <span className="font-cursive text-xl font-semibold text-[#B89A4A]">
+<span className="font-cursive text-xl font-semibold text-[#B6A27A]">
   Meets Global
 </span>
   <div className="mx-2 h-5 w-[1.5px] bg-[#0F3D3E]/50" />

@@ -23,8 +23,8 @@ export function Header() {
           <Logo className="scale-[1.12]" />
 
           {/* 55 Years of Sustainability */}
-<div
-  className="ml-7 flex h-9 w-[125px] shrink-0 items-center"
+          <div
+  className="ml-3 flex h-9 w-[115px] shrink-0 items-center sm:ml-7 sm:w-[125px]"
   aria-label="55 Years of Sustainability"
 >
   {/* Vertical Divider */}
@@ -35,8 +35,7 @@ export function Header() {
   <span className="-translate-x-2 font-display text-[28px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A] sm:translate-x-0">
   55
 </span>
-
-<div className="ml-0 max-w-[70px] -translate-x-2 flex flex-col justify-center leading-none sm:ml-2.5 sm:max-w-none sm:translate-x-0">
+<div className="ml-0 max-w-[70px] -translate-x-0.5 flex flex-col justify-center leading-none sm:ml-1.5 sm:max-w-none sm:-translate-x-0.5">
       <span className="text-[8px] font-semibold tracking-wide text-[#0D5845] sm:text-[10px]">
         Years of
       </span>

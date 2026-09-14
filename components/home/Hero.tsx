@@ -67,15 +67,18 @@ export function Hero() {
     Since 1971
   </span>
 </div>
+{/* Heading */}
 
-            {/* Heading */}
 <h1 className="mt-6 font-display text-[2.1rem] font-bold leading-[1.1] tracking-tight text-[#0D5845] sm:text-[2.6rem]">
-  Eco-Friendly Materials.
+  Sustainable Papers,
   <br />
-  Manufactured in India.
-  <br />
-  Exported Worldwide.
+  Packaging & Gifting.
 </h1>
+
+<p className="mt-4 text-[1.15rem] font-semibold tracking-wide text-[#0D5845]/80 sm:text-[1.35rem]">
+  Manufactured in India. Exported Worldwide.
+</p>
+
 
           </div>
 

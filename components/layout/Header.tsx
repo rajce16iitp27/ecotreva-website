@@ -32,7 +32,7 @@ export function Header() {
   
 
   <div className="flex items-center gap-1">
-  <span className="-translate-x-2 font-display text-[28px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A] sm:translate-x-0">
+  <span className="-translate-x-1 font-display text-[26px] font-extrabold leading-none tracking-[-0.08em] text-[#B89A4A] sm:text-[28px] sm:translate-x-0">
   55
 </span>
 <div className="ml-0 max-w-[70px] -translate-x-0.5 flex flex-col justify-center leading-none sm:ml-1.5 sm:max-w-none sm:-translate-x-0.5">

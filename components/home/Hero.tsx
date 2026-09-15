@@ -94,7 +94,7 @@ export function Hero() {
 </Button>
           </div>
 {/* Trust Strip */}
-<div className="mt-22">
+<div className="mt-28">
 <div className="flex justify-center gap-4 flex-wrap">
 
 <div className="flex w-52 items-center justify-center gap-3 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 px-5 py-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl">
